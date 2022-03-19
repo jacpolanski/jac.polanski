@@ -2,7 +2,7 @@
 # <jac.polanski/>
 > !!! IN PROGRESS  !!!
 > Personal landing page
-> Live demo [_here_](https://jacpolanski.github.io/CrazeFeatures/)
+> Live demo [_here_](https://jacpolanski.github.io/jac.polanski/)
 
 ## Table of Contents
 * [General Info](#general-information)
