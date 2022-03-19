@@ -10,8 +10,8 @@ const Footer = () => {
             <Navbar bg="dark" expand="lg" variant="dark" className="bg-opacity-75">
                 <Container className="flex-column justify-content-center text-light">
                     <div className="socials-icons text-center fs-2">
-                        <FontAwesomeIcon icon={faGithub} className="mx-2"/>
-                        <FontAwesomeIcon icon={faLinkedin} className="mx-2"/>
+                        <a className="link-light" href="https://github.com/jacpolanski" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="mx-2"/></a>
+                        <a className="link-light" href="https://www.linkedin.com/in/polanski-jacek" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} className="mx-2"/></a>
                     </div>
                     <div className="fs-6">
                         &copy; Copyright 2022, jac.polanski. All Rights Reserved
