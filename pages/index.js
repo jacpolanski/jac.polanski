@@ -3,7 +3,6 @@ import {Splide, SplideSlide} from '@splidejs/react-splide';
 import Container from "react-bootstrap/Container";
 
 
-
 export default function Home() {
     return (
         <div className="wrapper-index">
@@ -17,6 +16,7 @@ export default function Home() {
                     autoplay: true,
                     interval: "15000",
                     speed: "2000",
+                    pauseOnHover: true,
                 }}
                 >
 
