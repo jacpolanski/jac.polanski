@@ -15,7 +15,7 @@ export default function Home() {
                     gap: "2rem",
                     arrows: false,
                     autoplay: true,
-                    interval: "5000",
+                    interval: "15000",
                     speed: "2000",
                 }}
                 >
