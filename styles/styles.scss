@@ -15,12 +15,8 @@
 }
 
 .background-skills {
-  background: #66a6ff url("../public/cat.jpg") no-repeat fixed bottom/cover;
+  background: #66a6ff url("../public/waterfall.jpg") no-repeat fixed bottom/cover;
   height: 100vh;
-
-  @media (max-width: 1000px){
-    background-position: (bottom left -200px);
-  }
 
   .wrapper-skills {
     height: 100%;
@@ -31,10 +27,25 @@
 }
 
 .background-projects {
-  background: #66a6ff url("../public/dramatic_clouds.jpg") no-repeat fixed bottom/cover;
+  background: #66a6ff url("../public/dragonfly.jpg") no-repeat fixed bottom/cover;
   height: 100vh;
 
+  @media (max-width: 1000px) {
+    background-position: (bottom right -200px);
+  }
   .wrapper-projects {
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,0));
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+  }
+}
+
+.background-about-me {
+  background: #66a6ff url("../public/tree.jpg") no-repeat fixed bottom/cover;
+  height: 100vh;
+
+  .wrapper-about-me {
     height: 100%;
     background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,0));
     font-family: 'Indie Flower', cursive;
@@ -42,11 +53,11 @@
   }
 }
 
-.background-about-me {
-  background: #66a6ff url("../public/dramatic_clouds.jpg") no-repeat fixed bottom/cover;
+.background-contact {
+  background: #000 url("../public/moon.jpg") no-repeat fixed left/contain;
   height: 100vh;
 
-  .wrapper-about-me {
+  .wrapper-contact {
     height: 100%;
     background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,0));
     font-family: 'Indie Flower', cursive;
