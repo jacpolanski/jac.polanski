@@ -1,48 +1,97 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import {Nav, SSRProvider} from "react-bootstrap";
-import Link from "next/link";
+import { Nav, SSRProvider } from "react-bootstrap";
+import { Link } from "react-scroll";
 import LogoMain from "./LogoMain";
 
 const NavBar = () => {
-    const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
 
-    return (
-        <>
-            <SSRProvider>
-                <Navbar bg="dark" expand="lg" variant="dark" className="bg-opacity-75" expanded={expanded}>
-                    <Container>
-                        <LogoMain/>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav"
-                                       onClick={() => setExpanded(!expanded)}/>
-                        <Navbar.Collapse
-                            className="justify-content-end fs-5"
-                            id="basic-navbar-nav"
-                        >
-                            <Nav onClick={() => setExpanded(false)}>
-                                <Link href="/">
-                                    <a className="nav-link">Home</a>
-                                </Link>
-                                <Link href="/skills">
-                                    <a className="nav-link">Skills</a>
-                                </Link>
-                                <Link href="/projects">
-                                    <a className="nav-link">Projects</a>
-                                </Link>
-                                <Link href="/about">
-                                    <a className="nav-link">About me</a>
-                                </Link>
-                                <Link href="/contact">
-                                    <a className="nav-link">Contact</a>
-                                </Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            </SSRProvider>
-        </>
-    );
+  return (
+    <>
+      <SSRProvider>
+        <Navbar
+          bg="dark"
+          expand="lg"
+          variant="dark"
+          className="bg-opacity-75"
+          fixed="top"
+          expanded={expanded}
+        >
+          <Container>
+            <LogoMain />
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={() => setExpanded(!expanded)}
+            />
+            <Navbar.Collapse
+              className="justify-content-end fs-5"
+              id="basic-navbar-nav"
+            >
+              <Nav>
+                <Link
+                  activeClass="active"
+                  className="nav-link"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setExpanded(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="nav-link"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setExpanded(false)}
+                >
+                  Skills
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="nav-link"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setExpanded(false)}
+                >
+                  Projects
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="nav-link"
+                  to="about-me"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setExpanded(false)}
+                >
+                  About me
+                </Link>
+                <Link
+                  activeClass="active"
+                  className="nav-link"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setExpanded(false)}
+                >
+                  Contact
+                </Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </SSRProvider>
+    </>
+  );
 };
 
 export default NavBar;
