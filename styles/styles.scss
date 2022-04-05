@@ -2,16 +2,24 @@ a {
   cursor: pointer;
 }
 
+@mixin wrapper {
+  height: 100%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+  scroll-snap-align: start;
+}
+
+.home-app {
+  scroll-snap-type: y mandatory;
+}
+
 .background-home {
   background: #66a6ff url("../public/mountains.jpg") no-repeat fixed bottom/cover;
   height: 100vh;
-  scroll-snap-align: center;
 
   .wrapper-home {
-    height: 100%;
+    @include wrapper;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
 
     h2 {
       font-size: 2rem;
@@ -22,56 +30,44 @@ a {
 .background-skills {
   background: #66a6ff url("../public/waterfall.jpg") no-repeat fixed bottom/cover;
   height: 100vh;
-  scroll-snap-align: center;
 
   .wrapper-skills {
-    height: 100%;
+    @include wrapper;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
   }
 }
 
 .background-projects {
   background: #66a6ff url("../public/dragonfly.jpg") no-repeat fixed center/cover;
   height: 100vh;
-  scroll-snap-align: center;
 
   @media (max-width: 1000px) {
     background-position: (center right -200px);
   }
 
   .wrapper-projects {
-    height: 100%;
+    @include wrapper;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
   }
 }
 
 .background-about-me {
   background: #66a6ff url("../public/tree.jpg") no-repeat fixed bottom/cover;
   height: 100vh;
-  scroll-snap-align: center;
 
   .wrapper-about-me {
-    height: 100%;
+    @include wrapper;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
   }
 }
 
 .background-contact {
   background: #000 url("../public/moon.jpg") no-repeat fixed left/contain;
   height: 100vh;
-  scroll-snap-align: center;
 
   .wrapper-contact {
-    height: 100%;
+    @include wrapper;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
   }
 }
 

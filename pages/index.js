@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HomePage from "../components/HomePage";
 
 export default function Home() {
