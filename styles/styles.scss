@@ -10,67 +10,67 @@ a {
 }
 
 .home-app {
-  scroll-snap-type: y mandatory;
-}
 
-.background-home {
-  background: #66a6ff url("../public/mountains.jpg") no-repeat fixed bottom/cover;
-  height: 100vh;
 
-  .wrapper-home {
-    @include wrapper;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+  .background-home {
+    background: #66a6ff url("../public/mountains.jpg") no-repeat fixed bottom/cover;
+    height: 100vh;
 
-    h2 {
-      font-size: 2rem;
+    .wrapper-home {
+      @include wrapper;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+
+      h2 {
+        font-size: 2rem;
+      }
     }
   }
-}
 
-.background-skills {
-  background: #66a6ff url("../public/waterfall.jpg") no-repeat fixed bottom/cover;
-  height: 100vh;
+  .background-skills {
+    background: #66a6ff url("../public/waterfall.jpg") no-repeat fixed bottom/cover;
+    height: 100vh;
 
-  .wrapper-skills {
-    @include wrapper;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
-  }
-}
-
-.background-projects {
-  background: #66a6ff url("../public/dragonfly.jpg") no-repeat fixed center/cover;
-  height: 100vh;
-
-  @media (max-width: 1000px) {
-    background-position: (center right -200px);
+    .wrapper-skills {
+      @include wrapper;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+    }
   }
 
-  .wrapper-projects {
-    @include wrapper;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+  .background-projects {
+    background: #66a6ff url("../public/dragonfly.jpg") no-repeat fixed center/cover;
+    height: 100vh;
+
+    @media (max-width: 1000px) {
+      background-position: (center right -200px);
+    }
+
+    .wrapper-projects {
+      @include wrapper;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+    }
   }
-}
 
-.background-about-me {
-  background: #66a6ff url("../public/tree.jpg") no-repeat fixed bottom/cover;
-  height: 100vh;
+  .background-about-me {
+    background: #66a6ff url("../public/tree.jpg") no-repeat fixed bottom/cover;
+    height: 100vh;
 
-  .wrapper-about-me {
-    @include wrapper;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+    .wrapper-about-me {
+      @include wrapper;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+    }
   }
-}
 
-.background-contact {
-  background: #000 url("../public/moon.jpg") no-repeat fixed left/contain;
-  height: 100vh;
+  .background-contact {
+    background: #000 url("../public/moon.jpg") no-repeat fixed left/contain;
+    height: 100vh;
 
-  .wrapper-contact {
-    @include wrapper;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    .wrapper-contact {
+      @include wrapper;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    }
   }
-}
 
-.logo {
-  font-family: 'Mansalva', cursive;
+  .logo {
+    font-family: 'Mansalva', cursive;
+  }
 }
