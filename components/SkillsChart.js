@@ -44,6 +44,7 @@ export const data = {
 };
 
 const options = {
+  responsive: true,
   plugins: {
     legend: {
       labels: {
@@ -54,17 +55,36 @@ const options = {
       },
     },
   },
+  scales: {
+    r: {
+      max: 100,
+      min: 0,
+      ticks: {
+        stepSize: 25,
+        // textStrokeColor: "rgb(136,28,11)",
+        color: "rgba(240, 240, 240, 0.5)",
+        backdropColor: "rgb(47, 56, 62)",
+      },
+      grid: {
+        color: "lightgreen",
+      },
+      angleLines: {
+        color: "rgba(240, 240, 240,0.8)",
+      },
+      pointLabels: {
+        color: "white",
+        font: {
+          size: 15,
+        },
+      },
+    },
+  },
 };
 
 function SkillsChart() {
   return (
     <Container className="d-flex justify-content-center align-items-center h-100">
-      <PolarArea
-        data={data}
-        options={options}
-        style={{ maxWidth: "50vw", maxHeight: "50vh" }}
-      />
-
+      <PolarArea data={data} options={options} className="polarChart" />
     </Container>
   );
 }

@@ -13,6 +13,7 @@ a {
 
   .scroll-snap {
   }
+
   .background-home {
     background: #66a6ff url("../public/mountains.jpg") no-repeat fixed bottom/cover;
     height: 100vh;
@@ -34,6 +35,11 @@ a {
     .wrapper-skills {
       @include wrapper;
       background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+
+      .polarChart {
+        min-width: 80vw;
+        max-height: 80vh;
+      }
     }
   }
 
