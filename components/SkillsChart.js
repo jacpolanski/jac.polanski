@@ -3,22 +3,13 @@ import Container from "react-bootstrap/Container";
 import {
   Chart as ChartJS,
   RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
+  ArcElement,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Radar } from "react-chartjs-2";
+import { PolarArea } from "react-chartjs-2";
 
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
+ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 const generateRGBA = (a) => {
   let r = Math.floor(Math.random() * 256);
@@ -27,9 +18,6 @@ const generateRGBA = (a) => {
   let rgba = "rgb(" + r + "," + g + "," + b + "," + a + ")";
   return rgba;
 };
-
-const backgroundColor = generateRGBA(0.5);
-const borderColor = backgroundColor.replace(/[^,]+(?=\))/, "1.0");
 
 const labels = [
   "Organizational skills",
@@ -41,44 +29,24 @@ const labels = [
 ];
 
 const skillsData = [73, 70, 60, 59, 61, 81];
+const backgroundColor = labels.map(() => generateRGBA(0.8));
 
 export const data = {
   labels: labels,
   datasets: [
     {
-      label: "Importance",
+      label: "# of Importance",
       data: skillsData,
       backgroundColor: backgroundColor,
-      borderColor: borderColor,
       borderWidth: 2,
     },
   ],
 };
 
 const options = {
-  responsive: true,
   plugins: {
     legend: {
-      display: false,
-    },
-  },
-  scales: {
-    r: {
-      max: 100,
-      min: 0,
-      ticks: {
-        stepSize: 20,
-        // textStrokeColor: "rgb(136,28,11)",
-        color: "rgba(240, 240, 240, 0.5)",
-        backdropColor: "rgb(47, 56, 62)",
-      },
-      grid: {
-        color: "lightgreen",
-      },
-      angleLines: {
-        color: "rgba(240, 240, 240,0.8)",
-      },
-      pointLabels: {
+      labels: {
         color: "white",
         font: {
           size: 18,
@@ -91,11 +59,12 @@ const options = {
 function SkillsChart() {
   return (
     <Container className="d-flex justify-content-center align-items-center h-100">
-      <Radar
+      <PolarArea
         data={data}
         options={options}
-        style={{ maxWidth: "80vw", maxHeight: "80vh" }}
+        style={{ maxWidth: "50vw", maxHeight: "50vh" }}
       />
+
     </Container>
   );
 }
