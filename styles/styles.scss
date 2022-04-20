@@ -9,6 +9,10 @@ a {
   scroll-snap-align: start;
 }
 
+.scroll-container {
+
+  .scroll-snap {
+  }
   .background-home {
     background: #66a6ff url("../public/mountains.jpg") no-repeat fixed bottom/cover;
     height: 100vh;
@@ -66,6 +70,7 @@ a {
       background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
     }
   }
+}
 
 .logo {
   font-family: 'Mansalva', cursive;
