@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import HomePage from "../components/HomePage";
 import { Element } from "react-scroll";
 import SkillsChart from "../components/SkillsChart";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -19,7 +20,9 @@ export default function Home() {
       </div>
 
       <div className="background-projects">
-        <Element className="wrapper-projects" name="projects"></Element>
+        <Element className="wrapper-projects" name="projects">
+          <Projects />
+        </Element>
       </div>
 
       <div className="background-about-me">

@@ -50,7 +50,7 @@ const NavBar = () => {
                   duration={500}
                   onClick={() => setExpanded(false)}
                 >
-                  Skills
+                  Soft Skills
                 </Link>
                 <Link
                   activeClass="active"
