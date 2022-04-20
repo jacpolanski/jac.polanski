@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 
 function Projects() {
   return (
-    <Container className="d-flex justify-content-center align-items-center overflow-auto">
+    <Container className="overflow-auto">
       <CardGroup>
         {projects.map((project) => (
           <Card key={uniqid()}>
