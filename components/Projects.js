@@ -6,11 +6,11 @@ import { projects } from "../data/projects";
 
 function Projects() {
   return (
-    <Container className="overflow-auto">
+    <Container className="d-flex  justify-content-center align-items-md-center overflow-auto h-100">
       <CardGroup>
         {projects.map((project) => (
-          <Card key={uniqid()}>
-            <Card.Img variant="top" src={project.src} />
+          <Card key={uniqid()} className="mx-1">
+            <Card.Img variant="top" src={project.src} className="p-2" />
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
               <Card.Text className="fs-5">{project.text}</Card.Text>
