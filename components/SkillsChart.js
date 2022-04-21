@@ -29,7 +29,10 @@ const labels = [
 ];
 
 const skillsData = [73, 70, 60, 59, 61, 81];
-const backgroundColor = labels.map(() => generateRGBA(0.8));
+const chartBackgroundColor = labels.map(() => generateRGBA(0.5));
+const chartBorderColors = chartBackgroundColor.map((color) =>
+  color.replace(/[^,]+(?=\))/, "1.0")
+);
 
 export const data = {
   labels: labels,
@@ -37,7 +40,8 @@ export const data = {
     {
       label: "# of Importance",
       data: skillsData,
-      backgroundColor: backgroundColor,
+      backgroundColor: chartBackgroundColor,
+      borderColor: chartBorderColors,
       borderWidth: 2,
     },
   ],
@@ -52,6 +56,7 @@ const options = {
         color: "white",
         font: {
           size: 18,
+          family: "Indie Flower",
         },
       },
     },
