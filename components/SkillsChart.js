@@ -55,7 +55,7 @@ const options = {
       labels: {
         color: "white",
         font: {
-          size: 18,
+          size: 22,
           family: "Indie Flower",
         },
       },
