@@ -6,8 +6,8 @@ import { projects } from "../data/projects";
 
 function Projects() {
   return (
-    <Container className="d-flex  justify-content-center align-items-md-center overflow-auto h-100">
-      <CardGroup>
+    <Container className="d-md-flex justify-content-md-center align-items-md-center overflow-auto h-100">
+      <CardGroup className="text-wrap">
         {projects.map((project) => (
           <Card key={uniqid()} className="mx-1">
             <Card.Img variant="top" src={project.src} className="p-2" />
